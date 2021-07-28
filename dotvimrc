@@ -1,0 +1,12 @@
+set number
+set clipboard=unnamed
+set nowrap
+set tabstop=4
+set expandtab
+set incsearch
+set nomagic
+syntax on
+set smartcase
+set nomagic
+set hls
+set ruler
