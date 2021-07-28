@@ -1,0 +1,30 @@
+export JAVA_HOME=$(/usr/libexec/java_home)
+export MAVEN_HOME=/usr/local/Cellar/maven/maven_home
+export NVM_DIR="$HOME/.nvm"
+#. "/usr/local/opt/nvm/nvm.sh"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
+export HISTCONTROL=ignoredups
+
+#aliases
+alias 'll=ls -l'
+alias 'lah=ls -lah'
+alias 'ltr=ls -ltr'
+alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+
+#aliases in script
+source ~/soft/myscripts/mac_alias.sh
+
+# Setting PATH for Python 3.7
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
+PATH="$HOME/soft/mountebank-v2.4.0-darwin-x64/:${PATH}"
+export PATH
+alias 'python=/Library/Frameworks/Python.framework/Versions/3.7/bin/python3.7'
+
+eval "$(starship init zsh)"
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
