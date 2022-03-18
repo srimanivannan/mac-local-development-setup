@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Get the current branch name 
+BRANCH_NAME=$(git symbolic-ref --short HEAD)
+CUR_MSG_FILE="$1"
+
+# If msg already has story id embedded then we're good
+SID=$(grep -oe '[SsDd]\d\+[: ]' $CUR_MSG_FILE)
+if [ -n "$SID" ]; then
+    exit 0
+fi
+
+# since no story found in commit msg, try to extract story/defect id from branch name
+SID=$(echo $BRANCH_NAME | grep -oe '[SsDd]\d\+' | head -1)
+
+# prepend extracted story id to commit message
+if [ -n "$SID" ]; then
+    sed -i.bak -e "1s/^/$SID: /" $CUR_MSG_FILE
+else
+    echo "FAILED: Could not parse story or defect id from your commit message or your branch name '$BRANCH_NAME'.  Please include a storyId or defectId in your commit message, or if preferred you may rename your git branch to include a storyId or defectId and then this storyId or defectId will be automatically used in future commits. Eg run this (using a real story id):"
+    echo "   git checkout -b S1234-$BRANCH_NAME; git branch -d $BRANCH_NAME"
+    exit 1
+fi

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+SID=$(grep -oe '^[Ss][0-9]\+-' $1)
+if [ -z $SID ]; then
+	echo "No story id detected in message! Please include an id of the form [sS][0-9]+- at the start of the message. For example 'S1234343-my message'. Aborting commit."
+	exit 1 
+fi

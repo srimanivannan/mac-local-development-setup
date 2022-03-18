@@ -1,0 +1,1 @@
+git config core.hooksPath $HOME/ms-git-hooks

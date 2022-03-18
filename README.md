@@ -1,1 +1,3 @@
-## Things needed to do local development setup
+## Mac local development setup guide
+
+
