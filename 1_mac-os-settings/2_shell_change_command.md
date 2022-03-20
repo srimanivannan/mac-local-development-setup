@@ -1,5 +1,9 @@
 # To change a default shell in terminal
 
+do spot light search `cmd + space` and pull `terminal` app
+
+right click on the app in dock -> options -> keep it dock 
+
 To see list of shells available in macos:
 
     cat /etc/shells

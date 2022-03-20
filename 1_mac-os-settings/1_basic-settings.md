@@ -52,3 +52,5 @@
          2. In scrolling check box, pick drop down value `With Inertia`
          3. In Enable Dragging,pick drop down value `three finger drag`
          Note: with this you can use three fingers for drag and drop
+   * ### mouse
+       * click `mouse` -> `point&click` -> check `secondary click`

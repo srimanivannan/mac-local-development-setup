@@ -2,10 +2,9 @@
 
 1. Goto https://www.nerdfonts.com/font-downloads
 2. Download the fonts that you are interested
-   1. Fura Code
-   2. Fire Code
-   3. Overpass Regular
-   4. Hack Nerd Font
-   5. Jetbrains Mono
-   6. Mononoki
-   7. powerlinesymbols
+   1. Overpass Regular
+   2. Fira code (Fura code is also inside)
+   3. Hack Nerd Font
+   4. Jetbrains Mono
+   5. Mononoki
+   6. powerlinesymbols (wget -c https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf)
