@@ -17,3 +17,7 @@ add below in `.config/fish/config.fish`
 ```
 set -x PATH $PATH $HOME/homebrew/bin
 ```
+
+### homebrew package installation default location
+Mac intel: `open /usr/local/Cellar/`
+M1 chip: `open /opt/homebrew/Cellar`
